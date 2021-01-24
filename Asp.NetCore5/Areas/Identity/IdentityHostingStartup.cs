@@ -1,5 +1,5 @@
 ﻿using System;
-using AspNetCore.Data;
+using DataAccess.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;

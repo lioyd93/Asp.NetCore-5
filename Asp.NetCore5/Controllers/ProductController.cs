@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using AspNetCore.Data;
+using DataAccess.Data;
 using AspNetCore.Models;
 using AspNetCore.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-
+using AspNetCore.Utility;
 
 namespace AspNetCore.Controllers
 {

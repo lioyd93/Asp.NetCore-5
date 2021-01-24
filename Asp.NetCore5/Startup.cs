@@ -1,4 +1,4 @@
-using AspNetCore.Data;
+using DataAccess.Data;
 using AspNetCore.Utility;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -13,6 +13,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataAccess.Repository.IRepository;
+using DataAccess.Repository;
 
 namespace Asp.NetCore5
 {
@@ -45,6 +47,17 @@ namespace Asp.NetCore5
                 Options.Cookie.HttpOnly = true;
                 Options.Cookie.IsEssential = true;
             });
+          //  services.Configure<BrainTreeSettings>(Configuration.GetSection("BrainTree"));
+          //  services.AddSingleton<IBrainTreeGate, BrainTreeGate>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IApplicationTypeRepository, ApplicationTypeRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IInquiryHeaderRepository, InquiryHeaderRepository>();
+            services.AddScoped<IInquiryDetailRepository, InquiryDetailRepository>();
+
+            services.AddScoped<IOrderHeaderRepository, OrderHeaderRepository>();
+            services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
+            services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
             services.AddControllersWithViews();
         }
 
