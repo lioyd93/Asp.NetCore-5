@@ -498,3 +498,11 @@ C:\Users\46739\Desktop\Asp.NetCore5\Asp.NetCore5\Asp.NetCore5\bin\Debug\net5.0\M
 C:\Users\46739\Desktop\Asp.NetCore5\Asp.NetCore5\Asp.NetCore5\bin\Debug\net5.0\Models.pdb
 C:\Users\46739\Desktop\Asp.NetCore5\Asp.NetCore5\Asp.NetCore5\bin\Debug\net5.0\DataAccess.dll
 C:\Users\46739\Desktop\Asp.NetCore5\Asp.NetCore5\Asp.NetCore5\bin\Debug\net5.0\DataAccess.pdb
+C:\Users\46739\Desktop\Asp.NetCore5\Asp.NetCore5\Asp.NetCore5\bin\Debug\net5.0\Braintree.dll
+C:\Users\46739\Desktop\Asp.NetCore5\Asp.NetCore5\Asp.NetCore5\bin\Debug\net5.0\System.Xml.XPath.XmlDocument.dll
+C:\Users\46739\Desktop\Asp.NetCore5\Asp.NetCore5\Asp.NetCore5\obj\Debug\net5.0\Razor\Views\Inquiry\Details.cshtml.g.cs
+C:\Users\46739\Desktop\Asp.NetCore5\Asp.NetCore5\Asp.NetCore5\obj\Debug\net5.0\Razor\Views\Inquiry\Index.cshtml.g.cs
+C:\Users\46739\Desktop\Asp.NetCore5\Asp.NetCore5\Asp.NetCore5\obj\Debug\net5.0\Razor\Views\Order\Details.cshtml.g.cs
+C:\Users\46739\Desktop\Asp.NetCore5\Asp.NetCore5\Asp.NetCore5\obj\Debug\net5.0\Razor\Views\Order\Index.cshtml.g.cs
+C:\Users\46739\Desktop\Asp.NetCore5\Asp.NetCore5\Asp.NetCore5\obj\Debug\net5.0\Razor\Views\Shared\_Notifications.cshtml.g.cs
+C:\Users\46739\Desktop\Asp.NetCore5\Asp.NetCore5\Asp.NetCore5\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll

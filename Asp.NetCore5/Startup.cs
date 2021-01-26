@@ -15,6 +15,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using DataAccess.Repository.IRepository;
 using DataAccess.Repository;
+using Utility.BrainTree;
+using DataAccess.Initializer;
 
 namespace Asp.NetCore5
 {
@@ -47,8 +49,8 @@ namespace Asp.NetCore5
                 Options.Cookie.HttpOnly = true;
                 Options.Cookie.IsEssential = true;
             });
-          //  services.Configure<BrainTreeSettings>(Configuration.GetSection("BrainTree"));
-          //  services.AddSingleton<IBrainTreeGate, BrainTreeGate>();
+            services.Configure<BrainTreeSettings>(Configuration.GetSection("BrainTree"));
+            services.AddSingleton<IBrainTreeGate, BrainTreeGate>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IApplicationTypeRepository, ApplicationTypeRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
@@ -58,11 +60,12 @@ namespace Asp.NetCore5
             services.AddScoped<IOrderHeaderRepository, OrderHeaderRepository>();
             services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
             services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
+            services.AddScoped<IDbInitializer, DbInitializer>();
             services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDbInitializer dbInitializer)
         {
             if (env.IsDevelopment())
             {
@@ -80,6 +83,7 @@ namespace Asp.NetCore5
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+            dbInitializer.Initialize();
             app.UseSession();
 
             app.UseEndpoints(endpoints =>
